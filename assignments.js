@@ -79,10 +79,29 @@ function findAddress(obj) {
 }
 
 
+function canPay(changeArray, totalDue) {
+    if (changeArray.length > 0) {
+        var totalMoney = 0;
+        for (var i = 0; i < changeArray.length; i++) {
+            totalMoney = totalMoney + changeArray[i];
+        }
+        if (totalMoney >= totalDue) {
+            return true;
+        } else {
+            return false;
+        }
+    } else {
+        return "Please provide valid elements";
+    }
+}
+
+
 let address = {
-    street: 10,
-    house: "15A",
-    society: 'Earth Perfect'
+    // street: 10,
+    // house: "15A",
+    // society: 'Earth Perfect'
 };
+
+console.log(canPay([1,1,1,2,2,3],10));
 
 
