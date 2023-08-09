@@ -91,17 +91,8 @@ function canPay(changeArray, totalDue) {
             return false;
         }
     } else {
-        return "Please provide valid elements";
+        return "Input array is empty.Please provide valid elements";
     }
 }
-
-
-let address = {
-    // street: 10,
-    // house: "15A",
-    // society: 'Earth Perfect'
-};
-
-console.log(canPay([1,1,1,2,2,3],10));
 
 
